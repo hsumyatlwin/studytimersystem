@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffffff">
+<title>Study Timer</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="music.css">
+</head>
+<body>
+<div class="timer-box">
+<div class="header-controls">
+<h1 class="title">Study Timer</h1>
+<button id="darkModeToggle" class="theme-toggle">🌙</button>
+</div>
+<div class="timer-display" id="timer">00:00</div>
+<div class="time-input">
+<label>Hours:</label>
+<input type="number" id="hoursInput" min="0" max="23" value="0">
+<label>Minutes:</label>
+<input type="number" id="minutesInput" min="0" max="59" value="25">
+<label>Seconds:</label>
+<input type="number" id="secondsInput" min="0" max="59" value="0">
+</div>
+<!-- Session Name Input -->
+<div class="session-name-input">
+<label for="sessionName">Session Name:</label>
+<input type="text" id="sessionName" placeholder="e.g., Math Homework, Reading..." maxlength="50">
+</div>
+<div class="buttons">
+<button id="startBtn">Start</button>
+<button id="pauseBtn">Pause</button>
+<button id="resetBtn">Reset</button>
+<button id="recordsBtn">📊 Records</button>
+</div>
+<div class="music-section">
+<button id="musicBtn">🎵 Music</button>
+<div id="musicPlayer" class="hidden">
+<div class="now-playing" id="nowPlaying">Select a song to play</div>
+<div class="music-list">
+<h3>📂 Available Music</h3>
+<div class="music-item" data-src="audio/lofi1.mp3">
+<span class="music-icon">🎵</span>
+<span>Lofi Track 1</span>
+</div>
+<div class="music-item" data-src="audio/lofi2.mp3">
+<span class="music-icon">🎵</span>
+<span>Lofi Track 2</span>
+</div>
+<div class="music-item" data-src="audio/lofi3.mp3">
+<span class="music-icon">🎵</span>
+<span>Lofi Track 3</span>
+</div>
+<div class="music-item" data-src="audio/lofi4.mp3">
+<span class="music-icon">🎵</span>
+<span>Lofi Track 4</span>
+</div>
+<div class="music-item" data-src="audio/lofi5.mp3">
+<span class="music-icon">🎵</span>
+<span>Lofi Track 5</span>
+</div>
+</div>
+<audio id="audioPlayer" controls loop></audio>
+</div>
+</div>
+<!-- Records Section -->
+<div id="recordsPanel" class="hidden">
+<h2>📊 Study Records</h2>
+
+<!-- Statistics -->
+<div class="stats-container">
+<div class="stat-card">
+<div class="stat-label">Today</div>
+<div class="stat-value" id="statToday">0h 0m</div>
+</div>
+<div class="stat-card">
+<div class="stat-label">This Week</div>
+<div class="stat-value" id="statWeek">0h 0m</div>
+</div>
+<div class="stat-card">
+<div class="stat-label">This Month</div>
+<div class="stat-value" id="statMonth">0h 0m</div>
+</div>
+</div>
+
+<!-- Records List -->
+<div class="records-list">
+<h3>Session History</h3>
+<div id="recordsList"></div>
+</div>
+</div>
+
+<!-- Notes Modal -->
+<div id="notesModal" class="modal hidden">
+<div class="modal-content">
+<h2>📝 Session Complete!</h2>
+<p class="modal-session-info" id="modalSessionInfo"></p>
+<label for="sessionNotes">Add notes about this session (optional):</label>
+<textarea id="sessionNotes" placeholder="What did you learn? What topics did you cover?"></textarea>
+<div class="modal-buttons">
+<button id="saveNotesBtn" class="save-btn">Save & Close</button>
+<button id="skipNotesBtn" class="skip-btn">Skip</button>
+</div>
+</div>
+</div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
