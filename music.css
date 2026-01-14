@@ -1,0 +1,83 @@
+/*音楽*/
+
+.music-section {
+    position: relative;
+}
+
+.music-section #musicBtn {
+    background: #667eea;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+.music-section #musicBtn:hover {
+    background: #5568d3;
+}
+
+.music-section .hidden {
+    display: none;
+}
+
+.music-section #musicPlayer {
+    margin-top: 15px;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.music-section .music-list {
+    margin-bottom: 20px;
+}
+
+.music-section .music-list h3 {
+    margin-top: 0;
+    color: #333;
+    font-size: 18px;
+}
+
+.music-section .music-item {
+    padding: 12px 16px;
+    margin: 8px 0;
+    background: #f5f5f5;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.music-section .music-item:hover {
+    background: #667eea;
+    color: white;
+    transform: translateX(5px);
+}
+
+.music-section .music-item.active {
+    background: #764ba2;
+    color: white;
+}
+
+.music-section .music-icon {
+    font-size: 20px;
+}
+
+.music-section audio {
+    width: 100%;
+    margin-top: 15px;
+}
+
+.music-section .now-playing {
+    padding: 10px;
+    background: #e8f5e9;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    color: #2e7d32;
+    font-weight: bold;
+}
